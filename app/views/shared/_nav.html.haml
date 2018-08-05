@@ -1,0 +1,17 @@
+/导航栏
+%div
+  %nav{class: "navbar navbar-expand-sm bg-dark navbar-dark fixed-top justify-content-center nav-justified"}
+    %a{class: "navbar-brand", href: "#"}Logo
+
+    %ul{class: "navbar-nav"}
+      %li{class: "nav-item"}
+        %a{class: "nav-link", href: "#"}Link
+      / 只会遍历它的下级元素
+      - 12.times do
+        %li{class: "nav-item"}
+          %a{class: "nav-link", href: "#"}Link
+      %li{class: "nav-item"}
+        %a{class: "nav-link", href: "#"}Last
+    %form{class: "form-inline"}
+      %input{class: "form-control", type: "text", placeholder: "Search"}
+      %button{class: "btn btn-success", type: "button"}搜索

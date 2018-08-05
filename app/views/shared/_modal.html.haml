@@ -1,0 +1,27 @@
+/ 模态框 
+/%div{class: "modal fade", id: "#{id}"}
+%div.modal.fade{id: id}
+  .modal-dialog
+    .modal-content
+      / 模态框头部 
+      .modal-header
+        %h4.modal-title
+          文章标题
+        %span.badge.badge-pill.badge-primary
+          主要
+          %span.badge.badge-light
+            4
+        %button.close{data:{dismiss:"modal"}}
+          &times;
+      / 模态框主体 
+      .modal-body{style: "height: 500px;"}
+        模态框内容..
+      / 模态框底部 
+      .modal-footer
+        .input-group.mb-3
+          %input.form-control{type: "text", placeholder: "此刻你在想什么.."}
+          .input-group-append
+            %button.btn.btn-primary
+              评论
+            %button.btn.btn-danger
+              清空

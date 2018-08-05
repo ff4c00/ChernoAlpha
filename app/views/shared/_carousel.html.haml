@@ -1,0 +1,27 @@
+/ 轮播图 
+%div{id:"demo", class:"carousel slide", data: {ride:"carousel"}}
+  / 指示符 
+  %ul{class:"carousel-indicators"}
+    - carousels.each_with_index do |carousel, index|
+      %li{data: {target:"#demo"}, data: {slide: {to: "#{index}"}}, class:"#{ index == 0 ? 'active' : ''}"}
+  
+  / 轮播图片 
+  %div{class:"carousel-inner"}
+    - carousels.each_with_index do |carousel, index|
+      %div{class:"carousel-item #{ index == 0 ? 'active' : ''}"}
+        %img{src:"#{carousel[:img][:src]}"}
+        %div{class:"carousel-caption"}
+          %h3= carousel[:title]
+          %p= carousel[:brief]
+
+    
+      
+  / 左右切换按钮 
+  %a{class:"carousel-control-prev", href:"#demo", data:  {lide:"prev"}}
+    %span{class:"carousel-control-prev-icon"}
+  %a{class:"carousel-control-next", href:"#demo", data: {slide:"next"}}
+    %span{class:"carousel-control-next-icon"}
+  
+
+
+

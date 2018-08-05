@@ -1,0 +1,11 @@
+/卡片
+%div{class: "row", style: ""}
+  - cards.each_with_index do |card, index|   
+    %div{class: "card col-6", style: 'height: 425px; border: none; margin: 5px 0px;'}
+      %img{class: "card-img-top img-responsive", src: "#{card[:img][:src]}", alt: "#{card[:img][:alt]}", style: "filter: blur(0px); height: 220px; width: auto;"}
+      %div{class: "card-body", style: 'background-color: rgba(175, 196, 220, 0.25);'}
+        %h4{class: "card-title"}=card[:title]
+        %p{class: "card-text"}=card[:brief]
+        / %a{href: "#{card[:btn_link]}", class: "btn btn-primary"}See Profile
+        %a{href: "#myModal", class: "btn btn-primary", data:{toggle: 'modal'}}See Profile
+        = render 'shared/modal', id: 'myModal'
