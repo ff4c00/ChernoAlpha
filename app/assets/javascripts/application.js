@@ -13,5 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+// require_tree path works like require_directory, but operates recursively to require all files in all subdirectories of the directory specified by path.
 //= require_tree .
 //= require plugin/bootstrap-4.1.3-dist/bootstrap.min 
