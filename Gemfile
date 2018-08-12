@@ -1,5 +1,5 @@
 # source 'https://rubygems.org'
-source 'https://gems.ruby-china.com' 
+source 'https://gems.ruby-china.com'
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -37,7 +37,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'haml', '~> 5.0', '>= 5.0.4'
 
-gem 'sass', '~> 3.5', '>= 3.5.7'
+gem 'pry-rails', '~> 0.3.6'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

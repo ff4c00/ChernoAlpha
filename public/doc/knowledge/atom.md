@@ -2,8 +2,7 @@
 ## 安装
 ### apm安装
 apm(Atom Package Manager)是atom的包管理工具.
-0. 进入安装目录(默认为:~/.atom/packages)
-0. 运行安装命令
+运行安装命令:
 ```shell
 apm install <package-name>
 ```

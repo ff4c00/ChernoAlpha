@@ -1,0 +1,7 @@
+/ 导航栏
+= render 'shared/nav'
+.div{ style: "margin-top: 70px;"}
+/ 轮播图
+= render 'shared/carousel', carousels: @blog_index[:carousels] 
+/ 卡片
+= render 'shared/card', cards: @blog_index[:cards]
