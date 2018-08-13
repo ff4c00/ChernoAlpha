@@ -39,6 +39,20 @@ gem 'haml', '~> 5.0', '>= 5.0.4'
 
 gem 'pry-rails', '~> 0.3.6'
 
+# 软删除(paranoia)
+## 依赖项
+  # activerecord
+## 创建迁移
+  # def change
+  #   add_column :table_name, :deleted_at, :datetime
+  #   add_index :table_name, :deleted_at
+  # end
+## 模型添加
+  # # without_default_scope: true 非必须项,添加后默认将不再查询出被软删除的数据
+  # acts_as_paranoid without_default_scope: true
+gem 'paranoia', '~> 2.4', '>= 2.4.1'
+gem 'activerecord', '5.0.7'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
